@@ -20,6 +20,7 @@ body {
 .barUp {
     display: flex;
     flex-direction: row;
+    border: solid 1px #000000;
 }
 .barUp div {
     display: flex;
@@ -27,7 +28,7 @@ body {
     width: 45%;
     color: #ffffff;
     font-size: 1.7rem;
-    background-color: #2e3936;
+    background-color: #6c4a00;
     justify-content: space-around;
 }
 .barright {
@@ -37,8 +38,9 @@ body {
     color: #ffffff;
     font-size: 2rem;
     text-align: center;
-    background-color: #2e3936;
+    background-color: #6c4a00;
     justify-content: space-around;
+    border: solid 1px #000000;
 }
 .cuadros {
     display: grid;
@@ -53,21 +55,22 @@ body {
 }
 
 .blanco {
-    background-color: #fff;
-    width: 8rem;
-    height: 8rem;
+    background-color: #888275;
+    width: 4rem;
+    height: 4rem;
     padding:9px;
-    color: #000;
+    
     text-align: center;
+    font-size: 2.5rem;
     
 }
 
 .negro {
-    background-color: #000000;
-    width: 8rem;
-    height: 8rem;
+    background-color: #825900;
+    width: 4rem;
+    height: 4rem;
     padding: 9px;
-    color: #000;
     text-align: center;
+    font-size: 2.5rem;
     
 }
