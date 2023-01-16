@@ -5,9 +5,10 @@ class caballo extends Pieza {
      */
     constructor(color) {
         const reglas = new Reglas([
-            new Coordenada(-1,+1), new Coordenada(+0,+1), new Coordenada(+1,+1),
-            new Coordenada(-1,+0),                        new Coordenada(+1,+0),
-            new Coordenada(-1,-1), new Coordenada(+0,-1), new Coordenada(+1,-1)
+            new Coordenada(2,+1), new Coordenada(+1,+2), new Coordenada(-1,+2),
+            
+            new Coordenada(-2,+1),                        new Coordenada(-2,-1),
+            new Coordenada(-1,-2), new Coordenada(+1,-2), new Coordenada(+2,-1)
         ], true);
         super(color,'Caballo',reglas)
         
