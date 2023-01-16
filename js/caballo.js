@@ -1,4 +1,4 @@
-class caballo extends Pieza {
+class Caballo extends Pieza {
     /**
      * 
      * @param {'blanco' | 'negro'} color 
