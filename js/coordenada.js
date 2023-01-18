@@ -1,8 +1,8 @@
 class Coordenada {
     /**
      * 
-     * @param {number} x valor dentro de una coordenada
-     * @param {number} y valor dentro de una coordenada
+     * @param {number} x valor en la posicion horizontal 
+     * @param {number} y valor en la posicion vertical 
      */
     constructor(x, y) {
         this.x = x;

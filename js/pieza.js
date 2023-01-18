@@ -9,8 +9,29 @@ class Pieza {
         this.color = color;
         this.nombre = nombre;
         this.reglas = reglas;
-        
     }
+
+    getFigura() {
+        if (this.nombre == 'Peon') {
+            return this.color === 'negro' ? '♟' : '♙'
+        }
+        if (this.nombre == 'Torre') {
+            return this.color === 'negro' ? '♜' : '♖'
+        }
+        if (this.nombre == 'Rey') {
+            return this.color === 'negro' ? '♚' : '♔'
+        }
+        if (this.nombre == 'Reina') {
+            return this.color === 'negro' ? '♛' : '♕'
+        }
+        if (this.nombre == 'Alfil') {
+            return this.color === 'negro' ? '♝' : '♗'
+        }
+        if (this.nombre == 'Caballo') {
+            return this.color === 'negro' ? '♞' : '♘'
+        }
+    }
+
     /**
      * 
      * @param {string} posicion es una coordenada que representa la posicion de la pieza
@@ -32,6 +53,7 @@ class Pieza {
         const x = toNumber[resultadoLetra]
         const y = parseInt(posicion.charAt(1));        
         const coordenada = new Coordenada(x,y);
-        console.log(this.reglas.getMovimientos(coordenada));
+        // console.log(this.reglas.getMovimientos(coordenada));
+        return this.reglas.getMovimientos(coordenada)
     }
 }

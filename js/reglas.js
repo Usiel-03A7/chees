@@ -19,7 +19,7 @@ class Reglas {
      * @returns {Array<string>} array de coordenadas en string
      */
     
-     getMovimientos(coordenada) { 
+    getMovimientos(coordenada) { 
 
         if (this.limitado) {
             const nurevasCor = this.movimientos.map((movimiento) => {
