@@ -142,3 +142,16 @@ body {
     font-size: 2.5rem;
     
 }
+
+.barLeft.reversa {
+    flex-direction: column;
+}
+.barRight.reversa {
+    flex-direction: column;
+}
+.barUp.reversa {
+    flex-direction: row-reverse;
+}
+.barDown.reversa {
+    flex-direction: row-reverse;
+}

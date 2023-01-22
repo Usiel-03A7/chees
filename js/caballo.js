@@ -6,7 +6,6 @@ class Caballo extends Pieza {
     constructor(color) {
         const reglas = new Reglas([
             new Coordenada(2,+1), new Coordenada(+1,+2), new Coordenada(-1,+2),
-            
             new Coordenada(-2,+1),                        new Coordenada(-2,-1),
             new Coordenada(-1,-2), new Coordenada(+1,-2), new Coordenada(+2,-1)
         ], true);

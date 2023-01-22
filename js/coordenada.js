@@ -4,7 +4,7 @@ class Coordenada {
      * @param {number} x valor dentro de una coordenada
      * @param {number} y valor dentro de una coordenada
      */
-    constructor(x, y) {
+    constructor(x, y) { 
         this.x = x;
         this.y = y;
     }
