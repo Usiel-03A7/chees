@@ -63,3 +63,10 @@ invertir.addEventListener('click', () => {
     }
 
 })
+cuadros.addEventListener('click',(e)=>{
+    
+    const piezaTurn = e.target.textContent;
+    
+    console.log(piezaTurn);
+    console.log('---------------');
+})
