@@ -67,9 +67,7 @@ invertir.addEventListener('click', () => {
     })
     
     
-    /**
-     * 
-    */
+  
    
    cuadros.addEventListener('click', (e) => {
        let cuadroElectoAnterior = cuadros.querySelector('.cuadroElecto')
