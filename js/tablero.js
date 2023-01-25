@@ -1,8 +1,10 @@
 class Tablero {
     constructor() {
+        /**
+         * Casillas es un arreglo Clave 'E' Valor  
+         */
 
         this.casillas = {
-
             'A1': new Casilla(new Torre('blanco'), new Coordenada(1, 1)),
             'B1': new Casilla(new Caballo('blanco'), new Coordenada(2, 1)),
             'C1': new Casilla(new Alfil('blanco'), new Coordenada(3, 1)),
@@ -25,7 +27,7 @@ class Tablero {
             'A3': new Casilla (null, new Coordenada(1,3)),
             'B3': new Casilla (null, new Coordenada(2,3)),
             'C3': new Casilla (null, new Coordenada(3,3)),
-            'D': new Casilla (null, new Coordenada(4,3)),
+            'D3': new Casilla (null, new Coordenada(4,3)),
             'E3': new Casilla (null, new Coordenada(5,3)),
             'F3': new Casilla (null, new Coordenada(6,3)),
             'G3': new Casilla (null, new Coordenada(7,3)),

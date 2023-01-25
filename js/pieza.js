@@ -9,6 +9,7 @@ class Pieza {
         this.color = color;
         this.nombre = nombre;
         this.reglas = reglas;
+        this.contador = 0;
 
     }
     /**
@@ -53,7 +54,6 @@ class Pieza {
         if (this.nombre==='Caballo') {
             return this.color === 'negro' ? '♞':'♘';
         }
-       
     }
 
 }
