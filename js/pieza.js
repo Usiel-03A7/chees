@@ -55,5 +55,6 @@ class Pieza {
             return this.color === 'negro' ? '♞':'♘';
         }
     }
+    
 
 }
