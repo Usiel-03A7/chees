@@ -28,3 +28,10 @@ for (let i = 0; i < array.length; i++) {
     each(element, i, array)
 
 }
+let cuadroElectoAnterior;
+let cuadroNuevo
+let pieza = tablero.casillas[cuadroElectoAnterior.id].pieza;
+let collor = pieza.color;
+let movimientosPermitidos
+
+
