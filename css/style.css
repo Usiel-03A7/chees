@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 body {
@@ -166,6 +167,15 @@ body {
 .movimiento::after {
     content: "";
     border: #ffffffa1 solid 3px;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border-radius: 50%;
+    
+}
+.capturar::after {
+    content: "";
+    border: #a70808a1 solid 3px;
     width: 5rem;
     height: 5rem;
     position: absolute;
