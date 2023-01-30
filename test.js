@@ -34,4 +34,3 @@ let pieza = tablero.casillas[cuadroElectoAnterior.id].pieza;
 let collor = pieza.color;
 let movimientosPermitidos
 
-

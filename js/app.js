@@ -76,11 +76,6 @@ cuadros.addEventListener('click', (e) => {
     limpiar();
 
     mover(e, cuadroElectoAnterior);
-
-    
-
-
-
 })
 
 function limpiar() {
@@ -98,95 +93,76 @@ function limpiar() {
         })
     }
 }
-    function mover(e, cuadroElectoAnterior) {
+function mover(e, cuadroElectoAnterior) {
 
-        let cuadroElecto = e.target
-
-
-        if (cuadroElectoAnterior) {
-
-            if (cuadroElectoAnterior.id === cuadroElecto.id) {
-                limpiar();
-                return
-            }
-            else {
-                let movimientoPermitido = tablero.casillas[cuadroElectoAnterior.id].pieza.move(cuadroElectoAnterior.id)
-
-                if (!movimientoPermitido.some(id => {
-                    return id === cuadroElecto.id
-                })) {
-                    return
-                }
-                if (movimientoPermitido.some(id => {
-                    
-                })) {
-
-                }
-                let AuxPieza = tablero.casillas[cuadroElectoAnterior.id].pieza
-                AuxPieza.contador++;
-                tablero.casillas[cuadroElecto.id].pieza = AuxPieza;
-                tablero.casillas[cuadroElectoAnterior.id].pieza = null;
-                cuadroElecto.textContent = cuadroElectoAnterior.textContent;
-                cuadroElectoAnterior.textContent = '';
-                return
-
-            }
-        }
+    let cuadroElecto = e.target
 
 
-        if (!tablero.casillas[cuadroElecto.id].pieza) {
+    if (cuadroElectoAnterior) {
+
+        if (cuadroElectoAnterior.id === cuadroElecto.id) {
+            limpiar();
             return
         }
+        else {
+            let movimientoPermitido = tablero.casillas[cuadroElectoAnterior.id].pieza.move(cuadroElectoAnterior.id)
 
-        cuadroElecto.classList.add('cuadroElecto');
-
-
-        let posibleMovimiento = tablero.casillas[cuadroElecto.id].pieza.move(cuadroElecto.id)
-        
-        if(posibleMovimiento.some(element=>{
-            return tablero.casillas[element]
-        })){}
-        //console.log(posibleMovimiento)
-        /*
-
-        posibleMovimiento.forEach(elemento, id => {
-            if(posibleMovimiento)
-        })
-        */
-
-        posibleMovimiento.forEach((coordenada,id) => {
-            if (!tablero.casillas[coordenada].pieza) {
-                cuadros.querySelector('#' + coordenada).classList.add('movimiento')   
+            if (!movimientoPermitido.some(id => {
+                return id === cuadroElecto.id
+            })) {
+                return
             }
-            else {
-                if (tablero.casillas[coordenada].pieza.color != tablero.casillas[cuadroElecto.id].pieza.color) {
-                    cuadros.querySelector('#' + coordenada).classList.add('capturar'); 
-                }
+            if (movimientoPermitido.some(id => {
+
+            })) {
+
             }
-            
-            
-            // let piezaVacia = 
-            // if (coordenada) {
-                    
-            //     }
-        })
+            let AuxPieza = tablero.casillas[cuadroElectoAnterior.id].pieza
+            AuxPieza.contador++;
+            tablero.casillas[cuadroElecto.id].pieza = AuxPieza;
+            tablero.casillas[cuadroElectoAnterior.id].pieza = null;
+            cuadroElecto.textContent = cuadroElectoAnterior.textContent;
+            cuadroElectoAnterior.textContent = '';
+            return
 
-
-        //tablero.casillas[cuadroElectoAnterior]
-
+        }
     }
 
-    // function PiezaConReglas(pieza) {
 
-    //     let figuras = [ '♞', '♘','♟', '♙', '♜', '♖', '♚', '♔', '♛', '♕', '♝', '♗'];
-    //     let piezaBuscada = pieza
-    //     for (let i = 0; i < figuras.length; i++) {
+    if (!tablero.casillas[cuadroElecto.id].pieza) {
+        return
+    }
 
-    //         if (piezaBuscada == figuras[i]) {
-    //             console.log('si está en el arreglo');      
-    //         }
-    //     }
-    // }
+    cuadroElecto.classList.add('cuadroElecto');
+
+
+    let posibleMovimiento = tablero.casillas[cuadroElecto.id].pieza.move(cuadroElecto.id)
+
+    if (posibleMovimiento.some(element => {
+        return tablero.casillas[element]
+    })) { }
+    //console.log(posibleMovimiento)
+
+
+    posibleMovimiento.forEach((coordenada, id) => {
+        if (!tablero.casillas[coordenada].pieza) {
+            cuadros.querySelector('#' + coordenada).classList.add('movimiento')
+        }
+        else {
+            if (tablero.casillas[coordenada].pieza.color != tablero.casillas[cuadroElecto.id].pieza.color) {
+                cuadros.querySelector('#' + coordenada).classList.add('capturar');
+            }
+        }
+
+
+
+    })
+
+
+
+
+}
+
 
 
 
